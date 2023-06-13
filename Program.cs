@@ -15,7 +15,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 // prepare image data
 var imageRecords = new List<HistoryRecord>();
-foreach (var directory in Directory.EnumerateDirectories("C:/img"))
+foreach (var directory in Directory.EnumerateDirectories("../../../img"))
 {
     var date = DateTime.Parse(Path.GetFileName(directory));
     var images = Directory.GetFiles(directory, "*.*").Where(s => s.EndsWith(".jpg") || s.EndsWith(".png") || s.EndsWith(".gif")).ToArray();
